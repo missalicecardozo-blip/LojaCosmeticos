@@ -24,3 +24,23 @@ def estoquistas(nome_usuario):
         produtos.remove(nome)
     elif opicoesEstoquista == "3":
         print("Voltando ao menu principal...")      
+
+def gerente(nome_usuario):
+    """"
+    função de acesso nivel 'gerente' .
+    Requer o parâmetro "nome_usuario" para verifecar quem está tentando acessar.
+    Permite visualisar e mudar a lista de produtos (Adicionar, Excluir, Atualizar).
+    """
+    print ('abrindo a página do gerente...') 
+
+    opcoesgerente = input("digite o número da opção desejada:\n1 - cadastrar cliente\n2 - adicionar estoquista\n3 - excluir estoquista")
+    match opcoesgerente:
+        case '1':
+            print('\nadicionar cliente')
+            nome = input ('digite o nome do cliente')
+            cliente.append(nome)
+        case '2':
+            print('\adicionar estoquista')
+            nome = input ('digite nome do estoquista')
+            
+    
