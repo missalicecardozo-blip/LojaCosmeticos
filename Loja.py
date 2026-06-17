@@ -42,5 +42,6 @@ def gerente(nome_usuario):
         case '2':
             print('\adicionar estoquista')
             nome = input ('digite nome do estoquista')
+           
             
     
