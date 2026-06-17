@@ -55,7 +55,7 @@ def donoempresa(Cinthia):
     função de acesso nivel "donoempresa" .
     Requer o parâmento "cinthia" para verificar quem esta tentando acessar.
     Permite excluir e adicionar gerentes (Adicionar, Excluir, Atualizar).
-    """"
+    """
     print ('abrindo a página do dono...')
    
     opcoesdono = input("digite o número da opção desejada:\n1 - cadastra cliente\n2 - adicionar gerente\n3 - excluir gerente\n4 - voltar\nEscolha: ")
