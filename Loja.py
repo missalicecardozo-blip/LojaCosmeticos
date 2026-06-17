@@ -13,20 +13,20 @@ def estoquistas(nome_usuario):
     print("abrindo a página de estoquista...")
 
     opicoesEstoquista = input("Digite o número da opção desejada:\n1 - Adicionar Produtos\n2 - Excluir Produtos\n3 - Voltar\nEscolha: ")
-    
-    if opicoesEstoquista == "1":
-        print("\nAdicionar Produtos:")
-        nome = input("Digite o produto que deseja adicionar:" )
-        produtos.append(nome)
-    elif opicoesEstoquista == "2":
-        print("\nExcluir Produtos:")
-        nome = input("Digite o produto que deseja excluir")
-        produtos.remove(nome)
-    elif opicoesEstoquista == "3":
-        print("Voltando ao menu principal...")      
+    match opcao:
+        case "1":
+           print("\nAdicionar Produtos:")
+           nome = input("Digite o produto que deseja adicionar:" )
+           produtos.append(nome)
+        case "2":
+           print("\nExcluir Produtos:")
+           nome = input("Digite o produto que deseja excluir")
+           produtos.remove(nome)
+        case "3":
+           print("Voltando ao menu principal...")      
 
 def gerente(nome_usuario):
-    """"
+    """
     função de acesso nivel 'gerente' .
     Requer o parâmetro "nome_usuario" para verifecar quem está tentando acessar.
     Permite visualisar e mudar a lista de produtos (Adicionar, Excluir, Atualizar).
@@ -75,13 +75,8 @@ def donoempresa(nome_usuario):
             estoquista.append(nome)
         case '4':
             print('Voltando ao menu principal...')
-
-
-
 user = input ('Escreva seu nome:')
 print(f"Seja bem-vindo, {user}!")
-
-
 while True :
     print("\n=== MENU PRINCIPAL ===")
     print("1 - estoquista")
@@ -103,5 +98,5 @@ while True :
             print(f"Bem-Vinda, {nome}")
         case "4":
             print("cancelando o sistema...")
-            break
-              
+            
+            
