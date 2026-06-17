@@ -50,10 +50,10 @@ def gerente(nome_usuario):
             estoquista.remove(nome)   
         case '4':
             print('Voltando ao menu principal...')       
-def donoempresa(Cinthia):
+def donoempresa(nome_usuario):
     """""
     função de acesso nivel "donoempresa" .
-    Requer o parâmento "cinthia" para verificar quem esta tentando acessar.
+    Requer o parâmento "nome_usuario" para verificar quem esta tentando acessar.
     Permite excluir e adicionar gerentes (Adicionar, Excluir, Atualizar).
     """
     print ('abrindo a página do dono...')
@@ -75,4 +75,33 @@ def donoempresa(Cinthia):
             estoquista.append(nome)
         case '4':
             print('Voltando ao menu principal...')
+
+
+
+user = input ('Escreva seu nome:')
+print(f"Seja bem-vindo, {user}!")
+
+
+while True :
+    print("\n=== MENU PRINCIPAL ===")
+    print("1 - estoquista")
+    print("2 - Gerente")
+    print("3 - donoEmpresa")
+    print("4 - Sair")
+
+    opcao = input("Digite o numero desejado:")
+
+    match opcao:
+        case "1":
+            nome = input("Digite o nome do estoquista:")
+            estoquista(nome)
+        case "2":
+            nome = input("Digite o nome do gerente:")
+            gerente(nome)
+        case "3":
+            nome = input("Digite o nome do donoEmpresa:")
+            print(f"Bem-Vinda, {nome}")
+        case "4":
+            print("cancelando o sistema...")
+            break
               
