@@ -33,15 +33,21 @@ def gerente(nome_usuario):
     """
     print ('abrindo a página do gerente...') 
 
-    opcoesgerente = input("digite o número da opção desejada:\n1 - cadastrar cliente\n2 - adicionar estoquista\n3 - excluir estoquista")
+    opcoesgerente = input("digite o número da opção desejada:\n1 - cadastrar cliente\n2 - adicionar estoquista\n3 - excluir estoquista\n4 - voltar\nEscolha: ")
     match opcoesgerente:
         case '1':
             print('\nadicionar cliente')
-            nome = input ('digite o nome do cliente')
+            nome = input ('Digite o nome do cliente')
             cliente.append(nome)
         case '2':
             print('\adicionar estoquista')
-            nome = input ('digite nome do estoquista')
-           
-            
+            nome = input ('Digite nome do estoquista')
+            estoquista.append(nome)
+
+        case '3':
+            print('Excluir estoquista') 
+            nome = input ('Digite o nome do estoquista que deseja excluir') 
+            estoquista.remove(nome)   
+        case '4':
+            print('Voltando ao menu principal...')       
     
