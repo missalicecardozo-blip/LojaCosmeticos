@@ -50,4 +50,29 @@ def gerente(nome_usuario):
             estoquista.remove(nome)   
         case '4':
             print('Voltando ao menu principal...')       
-    
+def donoempresa(Cinthia):
+    """""
+    função de acesso nivel "donoempresa" .
+    Requer o parâmento "cinthia" para verificar quem esta tentando acessar.
+    Permite excluir e adicionar gerentes (Adicionar, Excluir, Atualizar).
+    """"
+    print ('abrindo a página do dono...')
+   
+    opcoesdono = input("digite o número da opção desejada:\n1 - cadastra cliente\n2 - adicionar gerente\n3 - excluir gerente\n4 - voltar\nEscolha: ")
+    match opcoesdono:
+        case '1':
+            print('\nadicionar cliente')
+            nome = input ('digite o nome do cliente')
+            cliente.append(nome)
+        case '2':
+            print('\adicionar gerente')
+            nome = input ('Digite o nome do gerente')
+            gerente.append(nome)
+        case '3':
+            print('Excluir gerente')
+            nome = input('digite o nome do gerente que deseja excluir')
+            gerente.remove(nome)
+            estoquista.append(nome)
+        case '4':
+            print('Voltando ao menu principal...')
+              
